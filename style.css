@@ -65,20 +65,81 @@ body {
 
 #main {
   display: flex;
+  margin-top: 100px;
 }
 
-#main #left {
+#left {
   width: 60%;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#main #right {
+#left #vid p {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+#left #vid-links {
+  width: 86%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 0.1px solid #495057;
+}
+
+#left #vid-links #views {
+  color: #7f7f7f;
+}
+
+#left #vid-links .vid-link {
+  background-color: transparent;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#left #desc-div {
+  width: 86%;
+  margin-top: 10px;
+}
+
+#left #desc-div #profile-sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+#left #desc-div #profile-sub #profile {
+  display: flex;
+  align-items: center;
+}
+
+#left #desc-div #profile-sub #sub #join-btn {
+  cursor: pointer;
+  border: 1px solid #00a6fb;
+  border-radius: 2px;
+  background-color: transparent;
+  color: #00a6fb;
+  font-size: 15px;
+  padding: 8px 15px;
+}
+
+#left #desc-div #profile-sub #sub #sub-btn {
+  cursor: pointer;
+  border: 1px solid red;
+  border-radius: 2px;
+  background-color: red;
+  color: #fff;
+  font-size: 15px;
+  padding: 8px 15px;
+  margin-left: 5px;
+}
+
+#right {
   width: 30%;
-  height: 100vh;
-  position: fixed;
-  right: 0;
-  top: 100px;
 }
