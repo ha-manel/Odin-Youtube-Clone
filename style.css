@@ -231,7 +231,9 @@ body {
 }
 
 #right .recommanded-vid .thumbnail {
-  width: 170px;
+  min-width: 190px;
+  height: 110px;
+  object-fit: cover;
 }
 
 #right .recommanded-vid .vid-info {
