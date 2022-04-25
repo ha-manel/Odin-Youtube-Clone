@@ -52,5 +52,5 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- The pictures used in this project are from [Unsplash](unsplash.com)
+- The pictures used in this project are from [Unsplash](https://unsplash.com/)
 
