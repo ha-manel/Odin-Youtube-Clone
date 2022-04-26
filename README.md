@@ -12,10 +12,11 @@
 
 - HTML5
 - CSS3
+- JavaScript
 
 ## Live Demo
 
-Check **Live Demo** [here.](https://ha-manel.github.io/Odin_Project_Media/)
+Check **Live Demo** [here.](https://ha-manel.github.io/Odin-Youtube-Clone/)
 
 ## Getting Started
 
