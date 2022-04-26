@@ -12,6 +12,7 @@
 
 - HTML5
 - CSS3
+- JavaScript
 
 ## Live Demo
 
