@@ -136,7 +136,9 @@ main {
 iframe {
   width: 100%;
   max-width: 700px;
-  height: 300px;
+  min-height: 300px;
+  height: 400px;
+  max-height: 450px;
 }
 
 #video p {
@@ -414,6 +416,14 @@ iframe {
     padding: 0;
   }
 
+  #vid-links{
+    max-width: 700px;
+  }
+
+  #description-box{
+    max-width: 700px;
+  }
+
   #description-box p{
     font-size: 14px;
   }
@@ -437,14 +447,15 @@ iframe {
 
   .thumbnail{
     width: 50%;
-    min-width: 200px;
-    max-width: 250px;
-    height: 150px;
+    min-width: 180px;
+    max-width: 200px;
+    height: 120px;
   }
 
   .vid-info{
     width: 50%;
     max-width: 100px;
+    margin-top: 0;
   }
 
   .vid-title{
