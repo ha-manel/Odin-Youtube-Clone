@@ -30,6 +30,10 @@ nav {
   align-items: center;
 }
 
+.brand-div i{
+  color: #d00000;
+}
+
 #brand {
   display: none;
   text-decoration: none;
@@ -164,7 +168,8 @@ iframe {
 }
 
 .vid-link i{
-  margin-right: 10px;
+  margin-right: 5px;
+  color: #fff;
 }
 
 .vid-link {
@@ -175,7 +180,7 @@ iframe {
   outline: none;
   border: none;
   cursor: pointer;
-  margin-left: 8px;
+  margin-left: 15px;
   margin-top: 8px;
 }
 
@@ -196,6 +201,11 @@ iframe {
   display: flex;
   align-items: center;
   font-size: 12px;
+}
+
+#profile i{
+  color: #fff;
+  margin-right: 10px;
 }
 
 #subscribe {
@@ -328,7 +338,7 @@ iframe {
 .thumbnail {
   width: 100%;
   height: 200px;
-  margin-right: 5%;
+  margin-right: 2%;
   object-fit: cover;
 }
 
@@ -376,6 +386,15 @@ iframe {
     align-items: center;
   }
 
+  .links-div{
+    margin-right: 20px;
+  }
+
+  #search{
+    height: 40px;
+    font-size: 15px;
+  }
+
   main{
     flex-direction: row;
     width: 100vw;
@@ -393,6 +412,18 @@ iframe {
     width: 100%;
     max-width: 100%;
     padding: 0;
+  }
+
+  #description-box p{
+    font-size: 14px;
+  }
+
+  #subscribe button{
+    font-size: 1rem;
+  }
+
+  #section-titles{
+    font-size: 15px;
   }
 
   #recommanded-videos{
@@ -414,5 +445,13 @@ iframe {
   .vid-info{
     width: 50%;
     max-width: 100px;
+  }
+
+  .vid-title{
+    font-size: 16px;
+  }
+
+  .channel{
+    font-size: 14px;
   }
 }
