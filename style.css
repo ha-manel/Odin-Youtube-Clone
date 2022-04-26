@@ -1,40 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Smooch+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 body {
   margin: 0;
+  overflow-x: hidden;
   background-color: #111111;
   font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
 }
 
-#navbar {
-  width: 100%;
+header{
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100vw;
   position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
-  padding: 10px 0px;
+  padding: 10px 15px;
   background-color: #1f1f1f;
+  box-sizing: border-box;
 }
 
-#navbar .brand-div {
-  margin-left: 30px;
+.brand-div {
   display: flex;
   align-items: center;
 }
 
-#navbar #brand {
+#brand {
+  display: none;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 1.5rem;
+  letter-spacing: 0px;
   color: #fff;
   font-weight: bold;
   margin-left: 5px;
-  font-family: 'Smooch Sans', sans-serif;
 }
 
-#navbar #search {
-  width: 550px;
-  height: 40px;
-  font-size: 15px;
+.search-div {
+  display: flex;
+  width: 40%;
+  min-width: 150px;
+}
+
+#search {
+  width: 90%;
+  height: 30px;
+  font-size: 12px;
   padding-left: 10px;
   background-color: #111111;
   color: gray;
@@ -42,130 +57,208 @@ body {
   outline: none;
 }
 
-#navbar #search-btn {
+#search-btn {
   background-color: transparent;
   outline: 0;
   cursor: pointer;
-  font-size: 1.5em;
+  font-size: 1rem;
   border: none;
   margin-left: 5px;
+  color: #fff;
 }
 
-#navbar .nav-btn {
+.links-div {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  padding-left: 0;
+  list-style-type: none;
+  background-color: #111111;
+  z-index: -1;
+  transform: translateX(100%);
+  transition: transform 0.8s ease-in-out;
+}
+
+.links-div.active{
+  transform: translateX(0);
+}
+
+.nav-link {
   background-color: transparent;
   outline: 0;
   cursor: pointer;
   font-size: 1.3em;
   border: none;
   margin: 0px 10px;
+  color: #fff;
 }
 
-#navbar .links-div {
-  padding-top: 8px;
-  padding-right: 20px;
+#hamburger-menu {
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 1.7rem;
+  color: #fff;
+  outline: none;
+  border: none;
 }
 
-#main {
+main {
+  width: 100vw;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-top: 100px;
 }
 
-#left {
-  width: 60%;
+#video-info {
+  width: 90%;
+  max-width: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#left #vid p {
+#video {
+  width: 100%;
+  padding: 0 5%;
+  box-sizing: border-box;
+}
+
+iframe {
+  width: 100%;
+  max-width: 700px;
+  height: 300px;
+}
+
+#video p {
+  width: 100%;
   color: #fff;
   font-size: 18px;
   margin-bottom: 0;
+  font-weight: 500;
 }
 
-#left #vid-links {
-  width: 86%;
+#vid-links {
+  width: 100%;
   display: flex;
+  align-self: flex-start;
   justify-content: space-between;
   align-items: baseline;
   border-bottom: 0.1px solid #495057;
 }
 
-#left #vid-links #views {
+#views {
   color: #7f7f7f;
 }
 
-#left #vid-links .vid-link {
+.video-interaction-links {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vid-link i{
+  margin-right: 10px;
+}
+
+.vid-link {
+  display: flex;
   background-color: transparent;
   color: #fff;
-  font-size: 15px;
+  font-size: 13px;
   outline: none;
   border: none;
   cursor: pointer;
+  margin-left: 8px;
+  margin-top: 8px;
 }
 
-#left #desc-div {
-  width: 86%;
+#description-box {
+  width: 100%;
+  align-self: flex-start;
   margin-top: 10px;
 }
 
-#left #desc-div #profile-sub {
+#profile-subscribe {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
 }
 
-#left #desc-div #profile-sub #profile {
+#profile {
   display: flex;
   align-items: center;
+  font-size: 12px;
 }
 
-#left #desc-div #profile-sub #sub #join-btn {
+#subscribe {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  justify-content: flex-end;
+}
+
+#join-btn {
   cursor: pointer;
   border: 1px solid #00a6fb;
   border-radius: 2px;
   background-color: transparent;
   color: #00a6fb;
-  font-size: 15px;
+  font-size: 12px;
   padding: 8px 15px;
 }
 
-#left #desc-div #profile-sub #sub #sub-btn {
+#sub-btn {
   cursor: pointer;
   border: 1px solid #d00000;
   border-radius: 2px;
   background-color: #d00000;
   color: #fff;
-  font-size: 15px;
+  font-size: 12px;
   padding: 8px 15px;
   margin-left: 5px;
 }
 
-#left #desc-div #desc {
+#desciption {
   color: #fff;
-  padding-left: 30px;
+  padding-left: 5%;
   border-bottom: 0.1px solid #495057;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
-#left #comments {
+#comments {
   width: 86%;
 }
 
-#left #comments #section-titles {
+#section-titles {
   color: #fff;
   display: flex;
-  font-size: 17px;
+  font-size: 13px;
 }
-#left #comments #section-titles p:nth-of-type(2) {
+
+#section-titles p:nth-of-type(2) {
   margin-left: 30px;
 }
 
-#left #comments #leave-comment {
-  width: 90%;
+#leave-comment-label i {
+  font-size: 18px;
+  color: #fff;
+  margin-right: 10px;
+}
+
+#leave-comment {
+  width: 80%;
   background-color: transparent;
   color: #7f7f7f;
-  font-size: 15px;
+  font-size: 13px;
   height: 30px;
   border: none;
   border-bottom: 0.1px solid #495057;
@@ -173,81 +266,153 @@ body {
   margin-top: 10px;
 }
 
-#left #comments .comment-div {
-  margin-top: 25px;
+.comment-div {
+  margin-top: 15px;
   color: #fff;
 }
 
-#left #comments .comment-div .username-time {
+.username-time {
   display: flex;
   align-items: baseline;
 }
 
-#left #comments .comment-div .username {
-  font-weight: bold;
+.username {
+  font-size: 14px;
 }
 
-#left #comments .comment-div .time {
+.username i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.time {
   color: #7f7f7f;
-  margin-left: 15px;
+  margin-left: 10px;
   font-size: 13px;
 }
 
-#left #comments .comment-div .comment {
-  padding-left: 35px;
+.comment {
+  padding-left: 5%;
   margin-top: 0px;
+  font-size: 13px;
 }
 
-#left #comments .comment-div .like-dislike-btn {
-  cursor: pointer;
-  background-color: transparent;
-  color: #7f7f7f;
-  border: none;
-  outline: none;
-  font-size: 15px;
-}
-
-#left #comments .comment-div .reply-btn {
+.comment-div button {
   cursor: pointer;
   background-color: transparent;
   color: #7f7f7f;
   border: none;
   outline: none;
   font-size: 13px;
-  margin-left: 15px;
-}
-
-#right {
-  width: 30%;
-  margin-right: 30px;
-}
-
-#right .recommanded-vid {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-#right .recommanded-vid .thumbnail {
-  min-width: 190px;
-  height: 110px;
-  object-fit: cover;
-}
-
-#right .recommanded-vid .vid-info {
   margin-left: 10px;
 }
 
-#right .recommanded-vid .vid-info .vid-title {
+.like-btn i {
+  color: #fff;
+  margin-right: 8px;
+}
+
+#recommanded-videos {
+  width: 50%;
+  min-width: 240px;
+  margin-top: 70px;
+}
+
+.recommanded-vid {
+  display: flex;
+  margin-bottom: 10px;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 200px;
+  margin-right: 5%;
+  object-fit: cover;
+}
+
+.vid-info {
+  min-width: 200px;
+  max-width: 400px;
+  margin-top: 10px;
+  padding-right: 20px;
+  box-sizing: border-box;
+}
+
+.vid-title {
   margin: 0px;
   color: #fff;
   font-size: 15px;
 }
 
-#right .recommanded-vid .vid-info .channel {
+.channel {
   margin-top: 5px;
   color: #7f7f7f;
   font-size: 13px;
+}
+
+
+@media screen and (min-width: 900px) {
+  #hamburger-menu {
+    display: none;
+  }
+
+  .links-div{
+    position: unset;
+    transform: translateX(0);
+    background-color: transparent;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  #brand{
+    display: block;
+  }
+
+  nav{
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main{
+    flex-direction: row;
+    width: 100vw;
+    justify-content: center;
+  }
+
+  #video-info{
+    align-self: flex-start;
+    width: 65vw;
+    max-width: 50vw;
+    margin-right: 20px;
+  }
+
+  #video{
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  #recommanded-videos{
+    width: 35vw;
+    margin-top: 0;
+  }
+
+  .recommanded-vid{
+    flex-wrap: nowrap;
+  }
+
+  .thumbnail{
+    width: 50%;
+    min-width: 200px;
+    max-width: 250px;
+    height: 150px;
+  }
+
+  .vid-info{
+    width: 50%;
+    max-width: 100px;
+  }
 }
